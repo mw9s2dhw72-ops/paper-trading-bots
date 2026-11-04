@@ -1,0 +1,689 @@
+[
+ {
+  "bot_id": "ICH-485",
+  "src": "no-extinction",
+  "orig_id": 485,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 5,
+   "kijun": 22,
+   "senkou": 111,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.8639577065379231,
+   "test_sharpe": 1.0821276203229495,
+   "test_return": 0.4873771672296128,
+   "test_dd": 0.07491402602260677
+  }
+ },
+ {
+  "bot_id": "ICH-308",
+  "src": "no-extinction",
+  "orig_id": 308,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 5,
+   "kijun": 24,
+   "senkou": 92,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.8660916332716564,
+   "test_sharpe": 1.114464297500158,
+   "test_return": 0.5290999800132585,
+   "test_dd": 0.100973690675767
+  }
+ },
+ {
+  "bot_id": "ICH-470",
+  "src": "no-extinction",
+  "orig_id": 470,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 7,
+   "kijun": 20,
+   "senkou": 64,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "backtest": {
+   "train_sharpe": 1.8511815642963585,
+   "test_sharpe": 1.0898698318982407,
+   "test_return": 0.4927063295961376,
+   "test_dd": 0.07097468287290676
+  }
+ },
+ {
+  "bot_id": "ICH-356",
+  "src": "no-extinction",
+  "orig_id": 356,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 6,
+   "kijun": 20,
+   "senkou": 95,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "backtest": {
+   "train_sharpe": 1.833785347003885,
+   "test_sharpe": 0.8134041426789171,
+   "test_return": 0.33695173917367405,
+   "test_dd": 0.07075371622047821
+  }
+ },
+ {
+  "bot_id": "ICH-448",
+  "src": "no-extinction",
+  "orig_id": 448,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 9,
+   "kijun": 24,
+   "senkou": 120,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.8301164884987695,
+   "test_sharpe": 1.0139345123207715,
+   "test_return": 0.45540542916316995,
+   "test_dd": 0.09262420665300175
+  }
+ },
+ {
+  "bot_id": "ICH-431",
+  "src": "no-extinction",
+  "orig_id": 431,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 7,
+   "kijun": 23,
+   "senkou": 73,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "backtest": {
+   "train_sharpe": 1.8040182204527806,
+   "test_sharpe": 1.111748673887078,
+   "test_return": 0.5379258862262837,
+   "test_dd": 0.09481195936341402
+  }
+ },
+ {
+  "bot_id": "ICH-335",
+  "src": "no-extinction",
+  "orig_id": 335,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 6,
+   "kijun": 26,
+   "senkou": 72,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "backtest": {
+   "train_sharpe": 1.7821454651738973,
+   "test_sharpe": 1.2721403433731098,
+   "test_return": 0.6613402154780568,
+   "test_dd": 0.09462270367050174
+  }
+ },
+ {
+  "bot_id": "ICH-432",
+  "src": "no-extinction",
+  "orig_id": 432,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 7,
+   "kijun": 21,
+   "senkou": 95,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "backtest": {
+   "train_sharpe": 1.7370410441829947,
+   "test_sharpe": 0.9778575158647206,
+   "test_return": 0.42857168731483997,
+   "test_dd": 0.0716085102042171
+  }
+ },
+ {
+  "bot_id": "VD-218",
+  "src": "no-extinction",
+  "orig_id": 218,
+  "strategy": "VWAP Deviation",
+  "genome": {
+   "window": 25,
+   "threshold": 0.025921984489274293,
+   "mode": 1,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.7387947981031189,
+   "test_sharpe": 1.0809974138459513,
+   "test_return": 0.5532232617717432,
+   "test_dd": 0.12612100712032626
+  }
+ },
+ {
+  "bot_id": "ICH-422",
+  "src": "no-extinction",
+  "orig_id": 422,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 13,
+   "kijun": 27,
+   "senkou": 91,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.7177258177283878,
+   "test_sharpe": 0.9864595170585008,
+   "test_return": 0.44258168880057314,
+   "test_dd": 0.10212463767491198
+  }
+ },
+ {
+  "bot_id": "ICH-274",
+  "src": "no-extinction",
+  "orig_id": 274,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 7,
+   "kijun": 30,
+   "senkou": 79,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.6956175194074448,
+   "test_sharpe": 1.180505588028522,
+   "test_return": 0.6071919212547647,
+   "test_dd": 0.09981340611646994
+  }
+ },
+ {
+  "bot_id": "ST-1052",
+  "src": "main",
+  "orig_id": 1052,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 27,
+   "mult": 3.0013422149103195,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "backtest": {
+   "train_sharpe": 1.6665982875872227,
+   "test_sharpe": 1.098591059112608,
+   "test_return": 0.6301098198005437,
+   "test_dd": 0.15192090242500955
+  }
+ },
+ {
+  "bot_id": "ST-1066",
+  "src": "main",
+  "orig_id": 1066,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 26,
+   "mult": 3.184086522702839,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.679321793419495,
+   "test_sharpe": 1.2133175439442654,
+   "test_return": 0.714750334793502,
+   "test_dd": 0.113138897994709
+  }
+ },
+ {
+  "bot_id": "ST-986",
+  "src": "main",
+  "orig_id": 986,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 31,
+   "mult": 3.357058484401882,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "backtest": {
+   "train_sharpe": 1.6889160458613495,
+   "test_sharpe": 1.2075233032036852,
+   "test_return": 0.6972166271106968,
+   "test_dd": 0.094034918384583
+  }
+ },
+ {
+  "bot_id": "ST-1087",
+  "src": "main",
+  "orig_id": 1087,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 35,
+   "mult": 3.124503666561604,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.6378422170349651,
+   "test_sharpe": 1.1524549309875423,
+   "test_return": 0.6705419609568473,
+   "test_dd": 0.11068119475490423
+  }
+ },
+ {
+  "bot_id": "KCB-379",
+  "src": "no-extinction",
+  "orig_id": 379,
+  "strategy": "Keltner Channel Breakout",
+  "genome": {
+   "period": 19,
+   "mult": 0.6455909849189422,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.6189101318917742,
+   "test_sharpe": 1.2343152136273603,
+   "test_return": 0.6546894330245381,
+   "test_dd": 0.1323963110827897
+  }
+ },
+ {
+  "bot_id": "ST-987",
+  "src": "main",
+  "orig_id": 987,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 31,
+   "mult": 2.794999059792808,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "backtest": {
+   "train_sharpe": 1.6242045604882953,
+   "test_sharpe": 1.1197423065143193,
+   "test_return": 0.6288374895092035,
+   "test_dd": 0.13275752589885637
+  }
+ },
+ {
+  "bot_id": "ST-1029",
+  "src": "main",
+  "orig_id": 1029,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 39,
+   "mult": 3.357058484401882,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.6169342257955992,
+   "test_sharpe": 1.2685861891356756,
+   "test_return": 0.754733669540089,
+   "test_dd": 0.09412672936708855
+  }
+ },
+ {
+  "bot_id": "VD-500",
+  "src": "no-extinction",
+  "orig_id": 500,
+  "strategy": "VWAP Deviation",
+  "genome": {
+   "window": 41,
+   "threshold": 0.025921984489274293,
+   "mode": 1,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.525376994028557,
+   "test_sharpe": 1.5442964915212654,
+   "test_return": 1.0032398087539587,
+   "test_dd": 0.08777944935035109
+  }
+ },
+ {
+  "bot_id": "ST-1076",
+  "src": "main",
+  "orig_id": 1076,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 37,
+   "mult": 2.998581833394642,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "backtest": {
+   "train_sharpe": 1.515858015197996,
+   "test_sharpe": 1.0426682536871346,
+   "test_return": 0.5836093507822682,
+   "test_dd": 0.14622860295814766
+  }
+ },
+ {
+  "bot_id": "ST-1091",
+  "src": "main",
+  "orig_id": 1091,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 33,
+   "mult": 3.8218469248012887,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 4.0
+  },
+  "backtest": {
+   "train_sharpe": 1.5002907832426229,
+   "test_sharpe": 1.2053325457538042,
+   "test_return": 0.7029713381397453,
+   "test_dd": 0.11256668555269467
+  }
+ },
+ {
+  "bot_id": "TDB-20",
+  "src": "no-extinction",
+  "orig_id": 20,
+  "strategy": "Turtle / Donchian Breakout",
+  "genome": {
+   "entry": 53,
+   "exit": 20,
+   "stop_atr": 3.6792559787300414,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.3229445699443954,
+   "test_sharpe": 0.9809099101632751,
+   "test_return": 0.5075430684736855,
+   "test_dd": 0.09041588489256625
+  }
+ },
+ {
+  "bot_id": "ST-1081",
+  "src": "main",
+  "orig_id": 1081,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 40,
+   "mult": 2.542363792772936,
+   "short": 0,
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "backtest": {
+   "train_sharpe": 1.354630414908769,
+   "test_sharpe": 1.2942896769148848,
+   "test_return": 0.7702565989724732,
+   "test_dd": 0.11946586399472447
+  }
+ },
+ {
+  "bot_id": "TM-18",
+  "src": "no-extinction",
+  "orig_id": 18,
+  "strategy": "Time-Series Momentum",
+  "genome": {
+   "lookback": 98,
+   "vol_target": 0.17966089711220412,
+   "rebal": 2,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.2056359587710366,
+   "test_sharpe": 1.2530618622462182,
+   "test_return": 0.5423437914413263,
+   "test_dd": 0.07869464751334254
+  }
+ },
+ {
+  "bot_id": "ST-1086",
+  "src": "main",
+  "orig_id": 1086,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 30,
+   "mult": 2.0514483302618736,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.2737598551320277,
+   "test_sharpe": 1.0579492254803526,
+   "test_return": 0.5730523335299016,
+   "test_dd": 0.14119040027242058
+  }
+ },
+ {
+  "bot_id": "ICH-493",
+  "src": "no-extinction",
+  "orig_id": 493,
+  "strategy": "Ichimoku Cloud",
+  "genome": {
+   "tenkan": 8,
+   "kijun": 24,
+   "senkou": 91,
+   "short": 1,
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "backtest": {
+   "train_sharpe": 1.147973831167346,
+   "test_sharpe": 0.5148925732574662,
+   "test_return": 0.2727649448152487,
+   "test_dd": 0.19827973304648816
+  }
+ },
+ {
+  "bot_id": "SC-2",
+  "src": "no-extinction",
+  "orig_id": 2,
+  "strategy": "SMA Crossover",
+  "genome": {
+   "fast": 9,
+   "slow": 184,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 1.1045487086657138,
+   "test_sharpe": 1.1566434163991886,
+   "test_return": 0.8610414378600886,
+   "test_dd": 0.12057258352316735
+  }
+ },
+ {
+  "bot_id": "M-103",
+  "src": "no-extinction",
+  "orig_id": 103,
+  "strategy": "MACD",
+  "genome": {
+   "fast": 18,
+   "slow": 22,
+   "signal": 15,
+   "short": 1,
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "backtest": {
+   "train_sharpe": 1.011626591136252,
+   "test_sharpe": 0.43967813445709064,
+   "test_return": 0.26755561223293545,
+   "test_dd": 0.21149542018480239
+  }
+ },
+ {
+  "bot_id": "ST-1085",
+  "src": "main",
+  "orig_id": 1085,
+  "strategy": "Supertrend",
+  "genome": {
+   "atr_period": 30,
+   "mult": 2.6475911145926663,
+   "short": 1,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 0.8068791196102996,
+   "test_sharpe": 0.1555716137534597,
+   "test_return": 0.048746429086595544,
+   "test_dd": 0.25698004249625817
+  }
+ },
+ {
+  "bot_id": "DBO-71",
+  "src": "no-extinction",
+  "orig_id": 71,
+  "strategy": "DCA Bot (Safety Orders)",
+  "genome": {
+   "base": 0.4969502256223348,
+   "dip": 0.1359180446131388,
+   "scale": 1.7486080194569493,
+   "tp": 0.26942189744598694,
+   "max_orders": 2,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 0.8337535075559144,
+   "test_sharpe": 1.2873987399756452,
+   "test_return": 1.2317656598569107,
+   "test_dd": 0.1839724739494225
+  }
+ },
+ {
+  "bot_id": "EC-7",
+  "src": "no-extinction",
+  "orig_id": 7,
+  "strategy": "EMA Crossover",
+  "genome": {
+   "fast": 20,
+   "slow": 53,
+   "short": 1,
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "backtest": {
+   "train_sharpe": 0.7378688227616635,
+   "test_sharpe": 0.3832940020564183,
+   "test_return": 0.21767752579648336,
+   "test_dd": 0.17758528603411772
+  }
+ },
+ {
+  "bot_id": "GT-67",
+  "src": "no-extinction",
+  "orig_id": 67,
+  "strategy": "Grid Trading",
+  "genome": {
+   "anchor": 70,
+   "spacing": 0.06808528201926893,
+   "levels": 5,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 0.5076005764925391,
+   "test_sharpe": 1.1422149026265511,
+   "test_return": 0.5480300886738896,
+   "test_dd": 0.10502278752710714
+  }
+ },
+ {
+  "bot_id": "ZMR-39",
+  "src": "no-extinction",
+  "orig_id": 39,
+  "strategy": "Z-Score Mean Reversion",
+  "genome": {
+   "lookback": 97,
+   "entry_z": 1.2360118042410306,
+   "exit_z": 0.7504669639143688,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 0.32886321386607387,
+   "test_sharpe": 0.3791283053836998,
+   "test_return": 0.1417110516203437,
+   "test_dd": 0.14719852543491363
+  }
+ },
+ {
+  "bot_id": "SO-42",
+  "src": "no-extinction",
+  "orig_id": 42,
+  "strategy": "Stochastic Oscillator",
+  "genome": {
+   "k_period": 24,
+   "d_period": 2,
+   "low": 7.891728864604978,
+   "high": 92.07807189631525,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 0.18929707295046616,
+   "test_sharpe": 0.675080714305571,
+   "test_return": 0.30093720495796994,
+   "test_dd": 0.12216337044340941
+  }
+ },
+ {
+  "bot_id": "BMR-25",
+  "src": "no-extinction",
+  "orig_id": 25,
+  "strategy": "Bollinger Mean Reversion",
+  "genome": {
+   "period": 52,
+   "k": 1.014724539502011,
+   "short": 0,
+   "stop_type": "none",
+   "stop_mult": 0.0
+  },
+  "backtest": {
+   "train_sharpe": 0.16687418205751403,
+   "test_sharpe": 0.4136283042110718,
+   "test_return": 0.17912692102691574,
+   "test_dd": 0.1978718013965285
+  }
+ }
+]

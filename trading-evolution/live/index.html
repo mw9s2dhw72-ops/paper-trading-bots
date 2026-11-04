@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Paper Bots">
+<meta name="theme-color" content="#0e1117">
+<meta name="robots" content="noindex,nofollow">
+<link rel="manifest" href="/__TOKEN__/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/__TOKEN__/icon-180.png">
+<title>Paper Bots</title>
+<style>
+:root{--bg:#0e1117;--card:#161b24;--line:#262d3a;--txt:#e6e9ef;--mut:#8b93a5;--up:#2ecc71;--dn:#ff5c5c;--acc:#4ea1ff;--warn:#f5b041}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif}
+body{padding:calc(env(safe-area-inset-top) + 8px) 12px calc(env(safe-area-inset-bottom) + 70px)}
+.banner{background:#3a2a05;color:var(--warn);border:1px solid #6b4e0a;border-radius:10px;padding:8px 10px;font-weight:600;font-size:13px;text-align:center}
+h1{font-size:22px;margin:12px 0 2px}.sub{color:var(--mut);font-size:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:12px 0}
+.card h2{font-size:14px;color:var(--mut);margin:0 0 8px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.big{font-size:28px;font-weight:700}.up{color:var(--up)}.dn{color:var(--dn)}.mut{color:var(--mut)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kv{background:#11151d;border-radius:10px;padding:8px}.kv .l{font-size:11px;color:var(--mut)}.kv .v{font-size:17px;font-weight:600}
+.row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);gap:8px}
+.row:last-child{border-bottom:0}.row .name{font-weight:600}.row .s{font-size:12px;color:var(--mut)}
+.right{text-align:right;white-space:nowrap}
+.tabs{position:fixed;left:0;right:0;bottom:0;display:flex;background:#0b0e14ee;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);backdrop-filter:blur(8px)}
+.tabs button{flex:1;background:none;border:0;color:var(--mut);padding:12px 0;font-size:14px;font-weight:600}
+.tabs button.on{color:var(--acc)}
+.pill{display:inline-block;font-size:11px;border-radius:999px;padding:1px 7px;background:#222a38;color:var(--mut);margin-left:4px}
+.pill.live{background:#0f3321;color:var(--up)}.pill.closed{background:#3a1d1d;color:#ff9b9b}
+svg{width:100%;height:auto;display:block}
+.back{background:none;border:0;color:var(--acc);font-size:15px;padding:6px 0}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:right}td:first-child,th:first-child{text-align:left}th{color:var(--mut);font-weight:500}
+.legend{display:flex;gap:12px;font-size:12px;color:var(--mut);flex-wrap:wrap;margin-bottom:4px}.sw{display:inline-block;width:10px;height:3px;border-radius:2px;margin-right:4px;vertical-align:middle}
+</style></head><body>
+<div class="banner">PAPER TRADING · SIMULATED · NO REAL MONEY (£)</div>
+<div id="app"><p class="mut">Loading…</p></div>
+<div class="tabs"><button id="t-home" class="on" onclick="go('home')">Overview</button><button id="t-bots" onclick="go('bots')">Bots</button><button id="t-evo" onclick="go('evo')">Evolution</button><button id="t-trades" onclick="go('trades')">Trades</button></div>
+<script>
+const T="__TOKEN__";let S=null,view='home',botId=null,B=null;
+const $=s=>document.querySelector(s);
+const usd=v=>(v<0?'-':'')+'$'+Math.abs(v).toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2});
+const gbp=v=>(v<0?'-':'')+'£'+Math.abs(v).toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2});
+const PAL=['#4ea1ff','#f5b041','#2ecc71','#c39bd3','#ff7f50','#48c9b0','#f1948a','#85c1e9','#d4ac0d','#a3e4d7','#bb8fce','#f8c471','#7dcea0','#e59866','#aab7b8'];
+const sg=(v,d=2)=>(v>0?'+':'')+v.toFixed(d);
+const cls=v=>v>0?'up':(v<0?'dn':'mut');
+const tm=t=>new Date(t*1000).toLocaleString('en-GB',{timeZone:'Europe/London',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+const ago=s=>s<90?Math.round(s)+'s':s<5400?Math.round(s/60)+'m':s<172800?Math.round(s/3600)+'h':Math.round(s/86400)+'d';
+function chart(series,colors,h=170){ // series: [[ [t,v],... ], ...]
+  const all=series.flat().filter(p=>p[1]!=null); if(all.length<2) return '<p class="mut" style="font-size:13px">Chart fills in as snapshots arrive (one per minute).</p>';
+  const W=340,H=h,pl=44,pr=6,pt=8,pb=20;
+  const t0=Math.min(...all.map(p=>p[0])),t1=Math.max(...all.map(p=>p[0]));
+  let v0=Math.min(...all.map(p=>p[1])),v1=Math.max(...all.map(p=>p[1]));if(v1-v0<1e-6){v0-=1;v1+=1}const pad=(v1-v0)*.08;v0-=pad;v1+=pad;
+  const X=t=>pl+(W-pl-pr)*(t1==t0?0:(t-t0)/(t1-t0)),Y=v=>pt+(H-pt-pb)*(1-(v-v0)/(v1-v0));
+  let g='';for(let i=0;i<=3;i++){const v=v0+(v1-v0)*i/3;g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="#262d3a"/><text x="${pl-4}" y="${Y(v)+4}" fill="#8b93a5" font-size="10" text-anchor="end">${'£'+(Math.abs(v1-v0)<20?v.toFixed(2):v.toFixed(0))}</text>`}
+  g+=`<text x="${pl}" y="${H-4}" fill="#8b93a5" font-size="10">${tm(t0)}</text><text x="${W-pr}" y="${H-4}" fill="#8b93a5" font-size="10" text-anchor="end">${tm(t1)}</text>`;
+  series.forEach((s,i)=>{const pts=s.filter(p=>p[1]!=null).map(p=>X(p[0]).toFixed(1)+','+Y(p[1]).toFixed(1)).join(' ');g+=`<polyline points="${pts}" fill="none" stroke="${colors[i]}" stroke-width="2" ${i>0?'stroke-dasharray="4 3"':''}/>`});
+  return `<svg viewBox="0 0 ${W} ${H}">${g}</svg>`;
+}
+function pricesCard(){const p=S.prices;const order=['BTC','ETH','SPY','QQQ','AAPL','GLD','FXE'];
+  return `<div class="card"><h2>Live prices <span class="pill ${S.us_open?'live':'closed'}">US market ${S.us_open?'open':'closed'}</span></h2>`+order.filter(a=>p[a]).map(a=>{const x=p[a];const ext=x.ext_price&&Math.abs(x.ext_price-x.price)>1e-9?`<div class="s">ext. hours ${usd(x.ext_price)}</div>`:'';
+  return `<div class="row"><div><div class="name">${a}</div><div class="s">${x.src}</div></div><div class="right"><div>${usd(x.price)}</div><div class="s">${ago(x.age)} ago</div>${ext}</div></div>`}).join('')+`</div>`}
+function home(){const E=S.evolution;const c=S.combined,start=S.start_balance,pnl=c.avg_equity-start,bp=c.bench_equity-start;
+  const hist=S.history;const s1=hist.map(r=>[r[0],r[1]]),s2=hist.map(r=>[r[0],r[2]]);
+  return `<h1>Paper Bots</h1><div class="sub">${S.n_bots} bots · £${S.start_balance.toLocaleString('en-GB')} each · started ${tm(S.started)} UK · updated ${ago(S.now-S.last_poll)} ago</div>
+  <div class="card"><h2>Combined portfolio vs buy-and-hold</h2>
+  <div class="grid2"><div class="kv"><div class="l">Avg bot (fund view)</div><div class="v">${gbp(c.avg_equity)}</div><div class="${cls(pnl)}">${sg(pnl/start*100)}%</div></div>
+  <div class="kv"><div class="l">Buy & hold (7 assets)</div><div class="v">${gbp(c.bench_equity)}</div><div class="${cls(bp)}">${sg(bp/start*100)}%</div></div></div>
+  <div class="legend" style="margin-top:10px"><span><span class="sw" style="background:#4ea1ff"></span>Avg bot incl. culled bots' P&L</span><span><span class="sw" style="background:#8b93a5"></span>Buy & hold</span></div>
+  ${chart([s1,s2],['#4ea1ff','#8b93a5'])}
+  <div class="sub">${S.n_trades} paper trades · values in £ (GBP/USD ${S.fx?S.fx.rate.toFixed(4):'–'}, ${S.fx?S.fx.src:''})</div></div>
+  <div class="card" onclick="go('evo')"><h2>Evolution</h2><div class="grid2"><div class="kv"><div class="l">Generation</div><div class="v">${E.generation}</div></div><div class="kv"><div class="l">Next evolution (UK)</div><div class="v" style="font-size:15px">${tm(E.next_ts)}</div></div></div><div class="sub" style="margin-top:6px">${E.n_dead} bots culled so far · tap for log →</div></div>
+  <div class="card"><h2>Top 5 bots (% since birth)</h2>${S.bots.slice(0,5).map(botRow).join('')}<button class="back" onclick="go('bots')">All ${S.n_bots} bots →</button></div>
+  ${pricesCard()}
+  <div class="card sub">Signals use completed daily bars (crypto 00:00 UTC; US close 16:00 ET) and execute at the next live price; stocks only trade 09:30–16:00 ET. Last bars: ${Object.entries(S.signal_bar).map(([a,d])=>a+' '+d).join(', ')}.</div>`}
+function botRow(b,i){return `<div class="row" onclick="openBot('${b.id}')"><div><div class="name">${b.id}</div><div class="s">${b.strategy} · gen ${b.generation} · ${b.positions.length?'in '+b.positions.join(', '):'flat'}</div></div><div class="right"><div>${gbp(b.equity)}</div><div class="${cls(b.pnl)}">${sg(b.pnl_pct)}% · ${b.age_days<1?Math.round(b.age_days*24)+'h':b.age_days.toFixed(1)+'d'}</div></div></div>`}
+function bots(){return `<h1>Leaderboard</h1><div class="sub">Ranked by % return since birth · every bot (and every child) starts with ${gbp(S.start_balance)}</div><div class="card">${S.bots.map(botRow).join('')}</div>`}
+function trades(){return `<h1>Recent trades</h1><div class="sub">Latest 60 paper fills (all bots + benchmark) · amounts in £, prices in $</div><div class="card">`+(S.trades.length?S.trades.map(t=>`<div class="row"><div><div class="name"><span class="${t.side=='BUY'?'up':'dn'}">${t.side}</span> ${t.asset}</div><div class="s">${t.bot} · ${tm(t.ts)}${isStop(t)?' · <span class="dn">stop-loss</span>':''}</div></div><div class="right"><div>${gbp(t.notional)}</div><div class="s">@ ${usd(t.price)} · fee ${gbp(t.fee)}</div></div></div>`).join(''):'<p class="mut">No trades yet.</p>')+`</div>`}
+function botView(){if(!B) return '<p class="mut">Loading…</p>';const st=B.start_capital,pnl=B.equity-st;const bt=B.backtest||{};
+  return `<button class="back" onclick="go('bots')">‹ Leaderboard</button><h1>${B.id}</h1><div class="sub">${B.strategy} · gen ${B.generation} · born ${tm(B.born_ts)} UK · genome v${B.genome_version} · ${Object.entries(B.genome).filter(([k])=>k!='stop_type'&&k!='stop_mult').map(([k,v])=>k+'='+(typeof v=='number'&&!Number.isInteger(v)?v.toFixed(3):v)).join(', ')}</div>
+  <div class="card"><div class="big">${gbp(B.equity)}</div><div class="${cls(pnl)}">${sg(pnl)} (${sg(pnl/st*100)}%) since birth</div>${chart([B.history],['#4ea1ff'])}
+  <div class="grid2"><div class="kv"><div class="l">Paper trades</div><div class="v">${B.n_trades}</div></div><div class="kv"><div class="l">Fees + slippage</div><div class="v">${gbp(B.fees)}</div></div>
+  <div class="kv"><div class="l">${bt.test_return!=null?'Backtest test return':'Recent-window fitness'}</div><div class="v">${bt.test_return!=null?sg(bt.test_return*100,1)+'%':(bt.recent_fitness!=null?bt.recent_fitness.toFixed(2):'–')}</div></div><div class="kv"><div class="l">Backtest Sharpe</div><div class="v">${bt.test_sharpe!=null?bt.test_sharpe.toFixed(2):(bt.recent_sharpe!=null?bt.recent_sharpe.toFixed(2):'–')}</div></div></div></div>
+  ${stopCard()}
+  <div class="card"><h2>Lineage</h2><div class="sub">Parent: ${B.parent?`<a style="color:var(--acc)" onclick="openBot('${B.parent}')">${B.parent}</a>`:'none (seeded from backtest)'}${B.mate?' · crossover with '+B.mate:''}</div>
+  ${B.ancestors.length?`<div class="sub">Ancestry: ${B.ancestors.map(a=>a.id+(a.alive===false?' †':'')).join(' ← ')}</div>`:''}
+  ${B.children.length?`<div class="sub">Children: ${B.children.join(', ')}</div>`:''}
+  ${B.lineage.map(l=>`<div class="row"><div><div class="name" style="font-size:14px">${l.event}</div><div class="s">${tm(l.ts)} UK${l.mutations&&Object.keys(l.mutations).length?' · '+Object.entries(l.mutations).map(([k,v])=>k+' '+fmt(v[0])+'→'+fmt(v[1])).join(', '):''}${l.orig_id!=null?' · backtest bot #'+l.orig_id+' ('+l.src+' run)':''}</div></div></div>`).join('')}</div>
+  <div class="card"><h2>Positions (7 sleeves)</h2><table><tr><th>Asset</th><th>Target</th><th>Value</th><th>Stop</th><th>Sleeve</th></tr>${B.sleeves.map(s=>`<tr><td>${s.asset}${s.pending!=null&&Math.abs(s.pending-s.target)>1e-9?' <span class="pill">pending '+(s.pending*100).toFixed(0)+'%</span>':''}${s.stop_lock?' <span class="pill">stopped out, waiting for fresh signal</span>':''}</td><td>${(s.target*100).toFixed(0)}%</td><td>${gbp(s.value)}</td><td>${s.stop_level!=null?usd(s.stop_level)+'<div class="s">'+s.stop_dist_pct.toFixed(1)+'% away</div>':'–'}</td><td>${gbp(s.equity)}</td></tr>`).join('')}</table></div>
+  <div class="card"><h2>Trades</h2>${B.trades.length?B.trades.map(t=>`<div class="row"><div><div class="name"><span class="${t.side=='BUY'?'up':'dn'}">${t.side}</span> ${t.asset}</div><div class="s">${tm(t.ts)} · ${isStop(t)?'<span class="dn">stop-loss</span>':'target '+(t.target*100).toFixed(0)+'%'}</div></div><div class="right"><div>${gbp(t.notional)}</div><div class="s">@ ${usd(t.price)}</div></div></div>`).join(''):'<p class="mut">No trades yet.</p>'}</div>`}
+const isStop=t=>(t.reason||'').startsWith('stop-loss');
+function stopCard(){const x=B.stop;if(!x)return '';const q=x.study;const m=v=>v==null?'–':(v*100).toFixed(1)+'%';
+  const row=(lab,a)=>a?`<tr><td>${lab}</td><td>${a.sharpe.toFixed(2)}</td><td>${sg(a.total_return*100,0)}%</td><td>${m(a.max_dd)}</td><td>${m(a.worst_trade)}</td></tr>`:'';
+  return `<div class="card"><h2>Stop-loss</h2><div class="name" style="font-size:15px">${x.rule}</div>
+  <div class="sub">${x.type=='none'?'This bot exits only on its own signal.':'Checked on every live price update (stocks only while the US market is open). After a stop-out the bot waits for a fresh signal before re-entering.'} Stop-outs so far: ${x.n_stopouts}</div>
+  ${q?`<div class="sub" style="margin-top:6px">${q.verdict=='stop accepted'?'Accepted':'Not used'}: ${q.reason}${q.candidate&&q.verdict!='stop accepted'?' (candidate tried: '+q.candidate.stop_type+' '+q.candidate.stop_mult+'× ATR)':''}</div>
+  <table style="margin-top:6px"><tr><th>Backtest</th><th>Sharpe</th><th>Return</th><th>Max DD</th><th>Worst trade</th></tr>
+  ${row('Train, no stop',q.no_stop.train)}${q.with_candidate?row('Train, with stop',q.with_candidate.train):''}${row('Test, no stop',q.no_stop.test)}${q.with_candidate?row('Test, with stop',q.with_candidate.test):''}</table>`:''}</div>`}
+const fmt=v=>typeof v=='number'&&!Number.isInteger(v)?v.toFixed(3):v;
+function mixChart(h){if(!h.length)return '';const names=[...new Set(h.flatMap(x=>Object.keys(x.mix)))];const W=340,bh=16,gap=6,H=h.length*(bh+gap)+4;
+  let g='';h.forEach((x,i)=>{const tot=Object.values(x.mix).reduce((a,b)=>a+b,0);let off=60;names.forEach((n,j)=>{const w=(W-64)*(x.mix[n]||0)/tot;if(w>0)g+=`<rect x="${off}" y="${i*(bh+gap)}" width="${w}" height="${bh}" fill="${PAL[j%PAL.length]}"/>`;off+=w});g+=`<text x="0" y="${i*(bh+gap)+12}" fill="#8b93a5" font-size="11">Gen ${x.gen}</text>`});
+  return `<svg viewBox="0 0 ${W} ${H}">${g}</svg><div class="legend" style="margin-top:6px">${names.map((n,j)=>`<span><span class="sw" style="background:${PAL[j%PAL.length]}"></span>${n} ${h[h.length-1].mix[n]||0}</span>`).join('')}</div>`}
+function evo(){const E=S.evolution,c=E.cfg||{};
+  return `<h1>Evolution</h1><div class="sub">Generation ${E.generation} · next step ${tm(E.next_ts)} UK${E.last_ts?' · last '+tm(E.last_ts)+' UK':''}</div>
+  <div class="card"><h2>How it works</h2><div class="sub">Daily at ${String(c.EVOLVE_HOUR_UTC).padStart(2,'0')}:${String(c.EVOLVE_MINUTE_UTC).padStart(2,'0')} UTC. Fitness = Sharpe − max drawdown, blending live paper results (weight 0 until ${c.MIN_LIVE_DAYS} live days, rising to ${c.W_LIVE_MAX*100}% at ${c.W_LIVE_FULL_DAYS} days) with a backtest on the latest ${c.ROLLING_BARS} daily bars (includes live days). The bottom ${c.CULL_FRAC*100}% of bots with ≥${c.MIN_LIVE_DAYS} live days are culled and replaced by re-optimised mutated clones of the top ${c.PARENT_FRAC*100}% (best of ${c.N_CANDIDATES} mutations; ${c.CROSSOVER_P*100}% crossover). Each child starts fresh with £${S.start_balance.toLocaleString('en-GB')}. Every ${c.RETRAIN_EVERY_DAYS} days each bot also re-trains if a mutation beats it by ${c.RETRAIN_MARGIN} on the recent window.</div></div>
+  <div class="card"><h2>Strategy mix over generations</h2>${mixChart(E.mix_history)}</div>
+  <div class="card"><h2>Evolution log</h2>${E.log.length?E.log.map(e=>`<div style="padding:8px 0;border-bottom:1px solid var(--line)"><div class="name">Gen ${e.gen} · ${tm(e.ts)} UK${e.dry_run?' (dry run)':''}</div>
+   ${e.note?`<div class="s">${e.note}</div>`:''}
+   ${e.killed.map(k=>`<div class="s"><span class="dn">✝ ${k.id}</span> fitness ${k.fitness}, ${sg(k.pct_since_birth)}% in ${k.live_days}d</div>`).join('')}
+   ${e.born.map(b=>`<div class="s"><span class="up">+ ${b.id}</span> clone of ${b.parent}${b.mate?' × '+b.mate:''} · ${Object.entries(b.mutations).map(([k,v])=>k+' '+fmt(v[0])+'→'+fmt(v[1])).join(', ')}</div>`).join('')}
+   ${e.retrained.map(r=>`<div class="s"><span style="color:var(--acc)">↻ ${r.id}</span> retrained ${r.old_fitness}→${r.new_fitness}: ${Object.entries(r.mutations).map(([k,v])=>k+' '+fmt(v[0])+'→'+fmt(v[1])).join(', ')}</div>`).join('')}</div>`).join(''):'<p class="mut">No evolution steps yet. First one: '+tm(E.next_ts)+' UK.</p>'}</div>
+  ${E.graveyard.length?`<div class="card"><h2>Graveyard</h2>${E.graveyard.map(g=>`<div class="row"><div><div class="name">${g.id}</div><div class="s">${g.strategy} · gen ${g.generation} · died gen ${g.died_in_gen}</div></div><div class="right ${cls(g.pct)}">${sg(g.pct)}%</div></div>`).join('')}</div>`:''}`}
+function render(){if(!S) return;$('#app').innerHTML=view=='home'?home():view=='bots'?bots():view=='trades'?trades():view=='evo'?evo():botView();
+  ['home','bots','evo','trades'].forEach(v=>$('#t-'+v).classList.toggle('on',v==view||(view=='bot'&&v=='bots')))}
+function go(v){view=v;botId=null;render();window.scrollTo(0,0)}
+async function openBot(id){view='bot';botId=id;B=null;render();window.scrollTo(0,0);await loadBot()}
+async function loadBot(){if(!botId)return;try{const r=await fetch(`/${T}/api/bot/${encodeURIComponent(botId)}`,{cache:'no-store'});B=await r.json();render()}catch(e){}}
+function stale(){if(!S)return;const age=Date.now()/1000-S.now;if(age>90){const t=new Date(S.now*1000).toLocaleString('en-GB',{timeZone:'Europe/London',hour:'2-digit',minute:'2-digit',day:'numeric',month:'short'});$('#app').insertAdjacentHTML('afterbegin',`<p class="dn">Offline copy from ${t} UK time. The server is asleep or reconnecting; it updates automatically when it's back.</p>`)}}
+async function load(){try{const r=await fetch(`/${T}/api/summary`,{cache:'no-store'});if(!r.ok)throw new Error(r.status);S=await r.json();if(view=='bot')await loadBot();else render();stale()}catch(e){if(S){render();stale()}else $('#app').insertAdjacentHTML('afterbegin','<p class="dn">Connection problem, retrying…</p>')}}
+if('serviceWorker' in navigator)navigator.serviceWorker.register(`/${T}/sw.js`,{scope:`/${T}/`}).catch(()=>{});
+load();setInterval(load,10000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)load()});
+</script></body></html>

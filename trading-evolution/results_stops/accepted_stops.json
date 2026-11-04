@@ -1,0 +1,1256 @@
+{
+ "ICH-485": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "chosen on TRAIN but failed on TEST: ok_ret",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.8639577065379231,
+    "total_return": 3.391292712551623,
+    "max_dd": 0.10249460456266257,
+    "worst_trade": -0.16594006294787322,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.0821276203229495,
+    "total_return": 0.4873771672296128,
+    "max_dd": 0.07491402602260677,
+    "worst_trade": -0.15500737837340783,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.8999966547562055,
+    "total_return": 3.5132569152904027,
+    "max_dd": 0.09552693018619429,
+    "worst_trade": -0.13836095673046267,
+    "n_stopouts": 37
+   },
+   "test": {
+    "sharpe": 1.0773777422317756,
+    "total_return": 0.46282905253042594,
+    "max_dd": 0.07657037638706266,
+    "worst_trade": -0.11494411333159582,
+    "n_stopouts": 33
+   }
+  }
+ },
+ "ICH-308": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "chosen on TRAIN but failed on TEST: ok_ret",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.8660916332716564,
+    "total_return": 3.5034731493343783,
+    "max_dd": 0.12967244346681062,
+    "worst_trade": -0.16594006294787322,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.114464297500158,
+    "total_return": 0.5290999800132585,
+    "max_dd": 0.100973690675767,
+    "worst_trade": -0.15500737837340783,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.9339265958731522,
+    "total_return": 3.7214829652214245,
+    "max_dd": 0.109488516063459,
+    "worst_trade": -0.13836095673046267,
+    "n_stopouts": 47
+   },
+   "test": {
+    "sharpe": 1.083769106785237,
+    "total_return": 0.4914799015363709,
+    "max_dd": 0.0992111124648698,
+    "worst_trade": -0.1013468779970953,
+    "n_stopouts": 28
+   }
+  }
+ },
+ "ICH-470": {
+  "stop_type": "atr",
+  "stop_mult": 2.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.8511815642963585,
+    "total_return": 3.4166956842987286,
+    "max_dd": 0.13890961355203335,
+    "worst_trade": -0.1775699545183893,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.0898698318982407,
+    "total_return": 0.4927063295961376,
+    "max_dd": 0.07097468287290676,
+    "worst_trade": -0.1858809327136366,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.8843834726250739,
+    "total_return": 3.5219633862073634,
+    "max_dd": 0.12578621541105106,
+    "worst_trade": -0.14101038246272735,
+    "n_stopouts": 46
+   },
+   "test": {
+    "sharpe": 1.1062725081629823,
+    "total_return": 0.49365347982621555,
+    "max_dd": 0.0709746828729062,
+    "worst_trade": -0.10881301292872714,
+    "n_stopouts": 28
+   }
+  }
+ },
+ "ICH-356": {
+  "stop_type": "atr",
+  "stop_mult": 2.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.833785347003885,
+    "total_return": 3.256735664684949,
+    "max_dd": 0.13482365930988205,
+    "worst_trade": -0.16421692381229935,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.8134041426789171,
+    "total_return": 0.33695173917367405,
+    "max_dd": 0.07075371622047821,
+    "worst_trade": -0.1858809327136366,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.8761701191846167,
+    "total_return": 3.3857413814393977,
+    "max_dd": 0.11876929092412192,
+    "worst_trade": -0.14101038246272735,
+    "n_stopouts": 40
+   },
+   "test": {
+    "sharpe": 0.8378808681077345,
+    "total_return": 0.3424925863292303,
+    "max_dd": 0.0701632500129844,
+    "worst_trade": -0.11494411333159582,
+    "n_stopouts": 31
+   }
+  }
+ },
+ "ICH-448": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 1.8301164884987695,
+    "total_return": 3.3127378392192153,
+    "max_dd": 0.1319062375986234,
+    "worst_trade": -0.17545083502123482,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.0139345123207715,
+    "total_return": 0.45540542916316995,
+    "max_dd": 0.09262420665300175,
+    "worst_trade": -0.15740658892728676,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "ICH-431": {
+  "stop_type": "atr",
+  "stop_mult": 2.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.8040182204527806,
+    "total_return": 3.2752783573591735,
+    "max_dd": 0.1570720450930554,
+    "worst_trade": -0.1775699545183893,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.111748673887078,
+    "total_return": 0.5379258862262837,
+    "max_dd": 0.09481195936341402,
+    "worst_trade": -0.1858809327136366,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.8546818230374955,
+    "total_return": 3.4308195437271234,
+    "max_dd": 0.1372414330238263,
+    "worst_trade": -0.1217570067216095,
+    "n_stopouts": 45
+   },
+   "test": {
+    "sharpe": 1.128123965956848,
+    "total_return": 0.5305381948376602,
+    "max_dd": 0.0921408703811234,
+    "worst_trade": -0.11964985584005139,
+    "n_stopouts": 32
+   }
+  }
+ },
+ "ICH-335": {
+  "stop_type": "atr",
+  "stop_mult": 2.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.7821454651738973,
+    "total_return": 3.26282664648327,
+    "max_dd": 0.1382997590254158,
+    "worst_trade": -0.1775699545183893,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.2721403433731098,
+    "total_return": 0.6613402154780568,
+    "max_dd": 0.09462270367050174,
+    "worst_trade": -0.1858809327136366,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.8383520799178332,
+    "total_return": 3.435963002210195,
+    "max_dd": 0.1220825683811656,
+    "worst_trade": -0.16253882921285034,
+    "n_stopouts": 48
+   },
+   "test": {
+    "sharpe": 1.2778774529880783,
+    "total_return": 0.6467603765470227,
+    "max_dd": 0.09424461599497591,
+    "worst_trade": -0.11964985584005139,
+    "n_stopouts": 30
+   }
+  }
+ },
+ "ICH-432": {
+  "stop_type": "atr",
+  "stop_mult": 2.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.7370410441829947,
+    "total_return": 2.935325571767096,
+    "max_dd": 0.1407205174949654,
+    "worst_trade": -0.1717362467747663,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.9778575158647206,
+    "total_return": 0.42857168731483997,
+    "max_dd": 0.0716085102042171,
+    "worst_trade": -0.1858809327136366,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.7742584362372051,
+    "total_return": 3.0378423296574377,
+    "max_dd": 0.12444711483256521,
+    "worst_trade": -0.16150516121130376,
+    "n_stopouts": 39
+   },
+   "test": {
+    "sharpe": 0.9924205912590054,
+    "total_return": 0.42964108216177865,
+    "max_dd": 0.07130042800525094,
+    "worst_trade": -0.11494411333159582,
+    "n_stopouts": 31
+   }
+  }
+ },
+ "VD-218": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 1.7387947981031189,
+    "total_return": 3.8647414316252933,
+    "max_dd": 0.151780452665234,
+    "worst_trade": -0.16475777483907694,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.0809974138459513,
+    "total_return": 0.5532232617717432,
+    "max_dd": 0.12612100712032626,
+    "worst_trade": -0.14963331310892336,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "ICH-422": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 1.7177258177283878,
+    "total_return": 3.055392605259973,
+    "max_dd": 0.14970670414441134,
+    "worst_trade": -0.17545083502123482,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.9864595170585008,
+    "total_return": 0.44258168880057314,
+    "max_dd": 0.10212463767491198,
+    "worst_trade": -0.098119577444716,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "ICH-274": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 1.6956175194074448,
+    "total_return": 3.0551034904522565,
+    "max_dd": 0.13562798254724262,
+    "worst_trade": -0.1568664555874415,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.180505588028522,
+    "total_return": 0.6071919212547647,
+    "max_dd": 0.09981340611646994,
+    "worst_trade": -0.1858809327136366,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "ST-1052": {
+  "stop_type": "atr",
+  "stop_mult": 3.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.6665982875872227,
+    "total_return": 3.5592764273211994,
+    "max_dd": 0.1784768859717466,
+    "worst_trade": -0.2989845226486175,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.098591059112608,
+    "total_return": 0.6301098198005437,
+    "max_dd": 0.15192090242500955,
+    "worst_trade": -0.30849443833736667,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.744127145470231,
+    "total_return": 3.6976875768718136,
+    "max_dd": 0.18772713146604936,
+    "worst_trade": -0.23886662001014303,
+    "n_stopouts": 41
+   },
+   "test": {
+    "sharpe": 1.1689471353727892,
+    "total_return": 0.6680209091091236,
+    "max_dd": 0.134058178083445,
+    "worst_trade": -0.23133358066710874,
+    "n_stopouts": 27
+   }
+  }
+ },
+ "ST-1066": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "chosen on TRAIN but failed on TEST: ok_ret",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.679321793419495,
+    "total_return": 3.718957804789098,
+    "max_dd": 0.1939900973986617,
+    "worst_trade": -0.2989845226486175,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.2133175439442654,
+    "total_return": 0.714750334793502,
+    "max_dd": 0.113138897994709,
+    "worst_trade": -0.1858809327136366,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.7914943423725807,
+    "total_return": 3.5682770705997866,
+    "max_dd": 0.1540869417728281,
+    "worst_trade": -0.20372204178620867,
+    "n_stopouts": 70
+   },
+   "test": {
+    "sharpe": 1.171409008674555,
+    "total_return": 0.5981099519636011,
+    "max_dd": 0.08015451957901798,
+    "worst_trade": -0.1144371100948941,
+    "n_stopouts": 37
+   }
+  }
+ },
+ "ST-986": {
+  "stop_type": "atr",
+  "stop_mult": 3.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.6889160458613495,
+    "total_return": 3.5592945957166737,
+    "max_dd": 0.2389897197977372,
+    "worst_trade": -0.3325184285557947,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.2075233032036852,
+    "total_return": 0.6972166271106968,
+    "max_dd": 0.094034918384583,
+    "worst_trade": -0.23434688428276162,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.7408689016697865,
+    "total_return": 3.671258316226991,
+    "max_dd": 0.205740215121606,
+    "worst_trade": -0.21048498318064146,
+    "n_stopouts": 39
+   },
+   "test": {
+    "sharpe": 1.2727877733493587,
+    "total_return": 0.7453915609157715,
+    "max_dd": 0.08717950933558549,
+    "worst_trade": -0.16864146570816296,
+    "n_stopouts": 17
+   }
+  }
+ },
+ "ST-1087": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "chosen on TRAIN but failed on TEST: ok_sharpe, ok_ret",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.6378422170349651,
+    "total_return": 3.3735693722888858,
+    "max_dd": 0.19619674990686453,
+    "worst_trade": -0.3325184285557947,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.1524549309875423,
+    "total_return": 0.6705419609568473,
+    "max_dd": 0.11068119475490423,
+    "worst_trade": -0.23434688428276162,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.7291689033185456,
+    "total_return": 3.557407779038355,
+    "max_dd": 0.19586968123206416,
+    "worst_trade": -0.22911597429268193,
+    "n_stopouts": 40
+   },
+   "test": {
+    "sharpe": 1.0913143386659225,
+    "total_return": 0.5859751379266955,
+    "max_dd": 0.10436195266111226,
+    "worst_trade": -0.16864146570816296,
+    "n_stopouts": 26
+   }
+  }
+ },
+ "KCB-379": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 1.6189101318917742,
+    "total_return": 3.090926341164203,
+    "max_dd": 0.21117131576392223,
+    "worst_trade": -0.21973841534056637,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.2343152136273603,
+    "total_return": 0.6546894330245381,
+    "max_dd": 0.1323963110827897,
+    "worst_trade": -0.12791927815484272,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "ST-987": {
+  "stop_type": "atr",
+  "stop_mult": 3.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.6242045604882953,
+    "total_return": 3.362087318024808,
+    "max_dd": 0.21791719281782163,
+    "worst_trade": -0.25067611320366634,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.1197423065143193,
+    "total_return": 0.6288374895092035,
+    "max_dd": 0.13275752589885637,
+    "worst_trade": -0.20151771989230294,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.6788950313932778,
+    "total_return": 3.4619065040625756,
+    "max_dd": 0.23616620836407987,
+    "worst_trade": -0.24006776983299227,
+    "n_stopouts": 42
+   },
+   "test": {
+    "sharpe": 1.1634699225626486,
+    "total_return": 0.6589214107156367,
+    "max_dd": 0.12178680636440953,
+    "worst_trade": -0.15776620930128116,
+    "n_stopouts": 23
+   }
+  }
+ },
+ "ST-1029": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "chosen on TRAIN but failed on TEST: ok_ret",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.6169342257955992,
+    "total_return": 3.268877131258053,
+    "max_dd": 0.2489903307656861,
+    "worst_trade": -0.3325184285557947,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.2685861891356756,
+    "total_return": 0.754733669540089,
+    "max_dd": 0.09412672936708855,
+    "worst_trade": -0.1858809327136366,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.7588451165572427,
+    "total_return": 3.3025795723992983,
+    "max_dd": 0.1694385271520864,
+    "worst_trade": -0.20372204178620867,
+    "n_stopouts": 65
+   },
+   "test": {
+    "sharpe": 1.2775228591159256,
+    "total_return": 0.6750701785802657,
+    "max_dd": 0.07381041396849208,
+    "worst_trade": -0.11381465429760718,
+    "n_stopouts": 36
+   }
+  }
+ },
+ "VD-500": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "chosen on TRAIN but failed on TEST: no risk improvement on test",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.525376994028557,
+    "total_return": 3.036332141281199,
+    "max_dd": 0.20367261509701706,
+    "worst_trade": -0.2057515148190916,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.5442964915212654,
+    "total_return": 1.0032398087539587,
+    "max_dd": 0.08777944935035109,
+    "worst_trade": -0.12738716398212524,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.5325720931931486,
+    "total_return": 3.0680250823517037,
+    "max_dd": 0.2074533168109579,
+    "worst_trade": -0.1897211787939419,
+    "n_stopouts": 11
+   },
+   "test": {
+    "sharpe": 1.5349210408265108,
+    "total_return": 0.9949027668577781,
+    "max_dd": 0.08815827929507924,
+    "worst_trade": -0.12738716398212524,
+    "n_stopouts": 6
+   }
+  }
+ },
+ "ST-1076": {
+  "stop_type": "atr",
+  "stop_mult": 3.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.515858015197996,
+    "total_return": 2.987527177443235,
+    "max_dd": 0.20876086586987508,
+    "worst_trade": -0.36020490686122186,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.0426682536871346,
+    "total_return": 0.5836093507822682,
+    "max_dd": 0.14622860295814766,
+    "worst_trade": -0.3124695497284167,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.613681481412224,
+    "total_return": 3.166708994293341,
+    "max_dd": 0.21287986996157449,
+    "worst_trade": -0.3136562325718908,
+    "n_stopouts": 41
+   },
+   "test": {
+    "sharpe": 1.188643100717965,
+    "total_return": 0.6738331623072953,
+    "max_dd": 0.11537033033590116,
+    "worst_trade": -0.16955032831454064,
+    "n_stopouts": 28
+   }
+  }
+ },
+ "ST-1091": {
+  "stop_type": "atr",
+  "stop_mult": 4.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 4.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.5002907832426229,
+    "total_return": 2.817845079738001,
+    "max_dd": 0.2627673788869601,
+    "worst_trade": -0.34753376070060116,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.2053325457538042,
+    "total_return": 0.7029713381397453,
+    "max_dd": 0.11256668555269467,
+    "worst_trade": -0.2047806648611229,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.518558744142088,
+    "total_return": 2.850750919708828,
+    "max_dd": 0.2493380688055321,
+    "worst_trade": -0.2740553576213688,
+    "n_stopouts": 22
+   },
+   "test": {
+    "sharpe": 1.1896321986736809,
+    "total_return": 0.6939535062091735,
+    "max_dd": 0.10778848159353005,
+    "worst_trade": -0.19328274918360555,
+    "n_stopouts": 14
+   }
+  }
+ },
+ "TDB-20": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "chosen on TRAIN but failed on TEST: ok_ret",
+  "candidate": {
+   "stop_type": "chandelier",
+   "stop_mult": 5.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.3229445699443954,
+    "total_return": 2.0972280835272206,
+    "max_dd": 0.1916037976354772,
+    "worst_trade": -0.21283280404602956,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.9809099101632751,
+    "total_return": 0.5075430684736855,
+    "max_dd": 0.09041588489256625,
+    "worst_trade": -0.16461612118793312,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.6851852592120067,
+    "total_return": 2.4081414516528103,
+    "max_dd": 0.16436699389878173,
+    "worst_trade": -0.21283280404602956,
+    "n_stopouts": 51
+   },
+   "test": {
+    "sharpe": 1.003381142361789,
+    "total_return": 0.4659132206813399,
+    "max_dd": 0.07605061142535163,
+    "worst_trade": -0.13694937081253167,
+    "n_stopouts": 43
+   }
+  }
+ },
+ "ST-1081": {
+  "stop_type": "atr",
+  "stop_mult": 3.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.354630414908769,
+    "total_return": 2.434521157359362,
+    "max_dd": 0.2405222040729328,
+    "worst_trade": -0.36020490686122186,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.2942896769148848,
+    "total_return": 0.7702565989724732,
+    "max_dd": 0.11946586399472447,
+    "worst_trade": -0.20151771989230294,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.413547932661778,
+    "total_return": 2.563828578309537,
+    "max_dd": 0.23988542217732656,
+    "worst_trade": -0.3136562325718908,
+    "n_stopouts": 35
+   },
+   "test": {
+    "sharpe": 1.305172851471282,
+    "total_return": 0.777865923038211,
+    "max_dd": 0.11607881009537269,
+    "worst_trade": -0.15776620930128116,
+    "n_stopouts": 18
+   }
+  }
+ },
+ "TM-18": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 1.2056359587710366,
+    "total_return": 0.8977350317575414,
+    "max_dd": 0.14727269767254125,
+    "worst_trade": -0.18343511902740095,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.2530618622462182,
+    "total_return": 0.5423437914413263,
+    "max_dd": 0.07869464751334254,
+    "worst_trade": -0.10282033457205453,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "ST-1086": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "chosen on TRAIN but failed on TEST: no risk improvement on test",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.2737598551320277,
+    "total_return": 2.1763344555741884,
+    "max_dd": 0.2527085115313785,
+    "worst_trade": -0.36020490686122186,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.0579492254803526,
+    "total_return": 0.5730523335299016,
+    "max_dd": 0.14119040027242058,
+    "worst_trade": -0.1638294408016001,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.3008048440953854,
+    "total_return": 2.23485346917506,
+    "max_dd": 0.24963843409024522,
+    "worst_trade": -0.3136562325718908,
+    "n_stopouts": 22
+   },
+   "test": {
+    "sharpe": 1.0395109582730935,
+    "total_return": 0.5595018889480914,
+    "max_dd": 0.14548864915120974,
+    "worst_trade": -0.1638294408016001,
+    "n_stopouts": 14
+   }
+  }
+ },
+ "ICH-493": {
+  "stop_type": "atr",
+  "stop_mult": 2.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 2.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.147973831167346,
+    "total_return": 2.7211310475183965,
+    "max_dd": 0.21572354139184025,
+    "worst_trade": -0.4714099819560206,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.5148925732574662,
+    "total_return": 0.2727649448152487,
+    "max_dd": 0.19827973304648816,
+    "worst_trade": -0.14262610959372268,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.1952030168681527,
+    "total_return": 2.797818309090555,
+    "max_dd": 0.1978800722134546,
+    "worst_trade": -0.3850888551268611,
+    "n_stopouts": 99
+   },
+   "test": {
+    "sharpe": 0.5469732765177827,
+    "total_return": 0.283971059234466,
+    "max_dd": 0.18272502991276396,
+    "worst_trade": -0.12244849196767194,
+    "n_stopouts": 52
+   }
+  }
+ },
+ "SC-2": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "chosen on TRAIN but failed on TEST: ok_ret",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 4.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.1045487086657138,
+    "total_return": 1.9385586361398053,
+    "max_dd": 0.21640510559017823,
+    "worst_trade": -0.504103475974696,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.1566434163991886,
+    "total_return": 0.8610414378600886,
+    "max_dd": 0.12057258352316735,
+    "worst_trade": -0.13422842921628486,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.1207132195975935,
+    "total_return": 1.8551765615040847,
+    "max_dd": 0.1703284988485546,
+    "worst_trade": -0.24268795394043408,
+    "n_stopouts": 6
+   },
+   "test": {
+    "sharpe": 1.1133901878882768,
+    "total_return": 0.7733219348524523,
+    "max_dd": 0.12923942440656144,
+    "worst_trade": -0.20549450284088233,
+    "n_stopouts": 3
+   }
+  }
+ },
+ "M-103": {
+  "stop_type": "atr",
+  "stop_mult": 3.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 1.011626591136252,
+    "total_return": 2.6704738673023245,
+    "max_dd": 0.2143613853522226,
+    "worst_trade": -0.3869356538627754,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.43967813445709064,
+    "total_return": 0.26755561223293545,
+    "max_dd": 0.21149542018480239,
+    "worst_trade": -0.26465626242169293,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 1.0553955074410502,
+    "total_return": 2.723746282011682,
+    "max_dd": 0.18943305499155727,
+    "worst_trade": -0.28445415864555645,
+    "n_stopouts": 86
+   },
+   "test": {
+    "sharpe": 0.5518211539160686,
+    "total_return": 0.35581318730079237,
+    "max_dd": 0.19056244347127738,
+    "worst_trade": -0.2822869156709923,
+    "n_stopouts": 67
+   }
+  }
+ },
+ "ST-1085": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 0.8068791196102996,
+    "total_return": 1.6950755632645809,
+    "max_dd": 0.27760377544011194,
+    "worst_trade": -0.3617983666979355,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.1555716137534597,
+    "total_return": 0.048746429086595544,
+    "max_dd": 0.25698004249625817,
+    "worst_trade": -0.20323313559613165,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "DBO-71": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 0.8337535075559144,
+    "total_return": 1.8961308868543965,
+    "max_dd": 0.410949305416492,
+    "worst_trade": 0.12830407293146195,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.2873987399756452,
+    "total_return": 1.2317656598569107,
+    "max_dd": 0.1839724739494225,
+    "worst_trade": 0.12812941421831092,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "EC-7": {
+  "stop_type": "atr",
+  "stop_mult": 3.0,
+  "verdict": "stop accepted",
+  "reason": "passed on TRAIN and confirmed on TEST",
+  "candidate": {
+   "stop_type": "atr",
+   "stop_mult": 3.0
+  },
+  "no_stop": {
+   "train": {
+    "sharpe": 0.7378688227616635,
+    "total_return": 1.4622686465938473,
+    "max_dd": 0.428442689002274,
+    "worst_trade": -0.5473151707631935,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.3832940020564183,
+    "total_return": 0.21767752579648336,
+    "max_dd": 0.17758528603411772,
+    "worst_trade": -0.25272125177426186,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": {
+   "train": {
+    "sharpe": 0.8829414360434726,
+    "total_return": 1.9379116369360032,
+    "max_dd": 0.31659901610877084,
+    "worst_trade": -0.46666197737870363,
+    "n_stopouts": 51
+   },
+   "test": {
+    "sharpe": 0.4467491247042905,
+    "total_return": 0.2620909814763832,
+    "max_dd": 0.18454783014478693,
+    "worst_trade": -0.24724905145944376,
+    "n_stopouts": 42
+   }
+  }
+ },
+ "GT-67": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 0.5076005764925391,
+    "total_return": 0.49376073829434275,
+    "max_dd": 0.27164199801127875,
+    "worst_trade": -0.6598025023869869,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 1.1422149026265511,
+    "total_return": 0.5480300886738896,
+    "max_dd": 0.10502278752710714,
+    "worst_trade": -0.3769848226537732,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "ZMR-39": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 0.32886321386607387,
+    "total_return": 0.24994998730978701,
+    "max_dd": 0.2514914056881208,
+    "worst_trade": -0.6625604554088936,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.3791283053836998,
+    "total_return": 0.1417110516203437,
+    "max_dd": 0.14719852543491363,
+    "worst_trade": -0.16952586493964772,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "SO-42": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 0.18929707295046616,
+    "total_return": 0.11650842885398438,
+    "max_dd": 0.3121657333637804,
+    "worst_trade": -0.716319973098729,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.675080714305571,
+    "total_return": 0.30093720495796994,
+    "max_dd": 0.12216337044340941,
+    "worst_trade": -0.4738116982720164,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ },
+ "BMR-25": {
+  "stop_type": "none",
+  "stop_mult": 0.0,
+  "verdict": "no stop",
+  "reason": "no candidate passed on TRAIN (each one cut Sharpe/return or didn't reduce risk)",
+  "candidate": null,
+  "no_stop": {
+   "train": {
+    "sharpe": 0.16687418205751403,
+    "total_return": 0.08993961687347207,
+    "max_dd": 0.30147827442139175,
+    "worst_trade": -0.68151863124908,
+    "n_stopouts": 0
+   },
+   "test": {
+    "sharpe": 0.4136283042110718,
+    "total_return": 0.17912692102691574,
+    "max_dd": 0.1978718013965285,
+    "worst_trade": -0.3089075538140553,
+    "n_stopouts": 0
+   }
+  },
+  "with_candidate": null
+ }
+}
